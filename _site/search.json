@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "trio-data-structures-2",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nMar 12, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMar 9, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Week 25 Hacks\n\n\n\n\n\n\n\n\n\n\n\n\nMar 12, 2023\n\n\nAdi, Akhil, Tristan\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMar 9, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
     "title": "Post With Code",
     "section": "",
-    "text": "This is a post with executable code.\nconsole.log(hi);"
+    "text": "System.out.println(\"Hi\");\n\nHi"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -26,5 +26,19 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "posts/Week 25 Hacks/index.html",
+    "href": "posts/Week 25 Hacks/index.html",
+    "title": "Week 25 Hacks",
+    "section": "",
+    "text": "System.out.println(\"np\");\n\nnp"
+  },
+  {
+    "objectID": "posts/Week-25-Hacks/index.html",
+    "href": "posts/Week-25-Hacks/index.html",
+    "title": "Week 25 Hacks",
+    "section": "",
+    "text": "System.out.println(\"np\");\n\nnp"
   }
 ]
