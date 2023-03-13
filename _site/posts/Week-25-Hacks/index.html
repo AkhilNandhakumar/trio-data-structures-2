@@ -203,14 +203,165 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;java&quot;}" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"np"</span><span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="week-25-hacks" class="level1">
+<h1>Week 25 Hacks</h1>
+<section id="code-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="code-exercises">Code Exercises</h2>
+<section id="primitive-types" class="level3">
+<h3 class="anchored" data-anchor-id="primitive-types">Primitive Types:</h3>
+<ul>
+<li>int</li>
+<li>double</li>
+<li>boolean</li>
+<li>char</li>
+</ul>
+</section>
+</section>
+<section id="converting-primitives-to-wrapper-classes" class="level2">
+<h2 class="anchored" data-anchor-id="converting-primitives-to-wrapper-classes">Converting Primitives to Wrapper Classes</h2>
+<ul>
+<li><p>int –&gt; Integer</p></li>
+<li><p>double –&gt; Double</p></li>
+<li><p>boolean –&gt; Boolean</p></li>
+<li><p>char –&gt; Character</p></li>
+<li><p>Introduce: String</p></li>
+</ul>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;java&quot;}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Arrays</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Random</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> WrapperClassesExample <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">// int</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Integer</span> num <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span><span class="dv">42</span><span class="op">);</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Integer</span><span class="op">[]</span> arr <span class="op">=</span> <span class="op">{</span><span class="bu">Integer</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span><span class="dv">1</span><span class="op">),</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span><span class="dv">2</span><span class="op">),</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span><span class="dv">3</span><span class="op">),</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span><span class="dv">4</span><span class="op">),</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span><span class="dv">5</span><span class="op">)};</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The number is "</span> <span class="op">+</span> num<span class="op">);</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The third element of the array is "</span> <span class="op">+</span> arr<span class="op">[</span><span class="dv">2</span><span class="op">]);</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="co">// double</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Double</span> d <span class="op">=</span> <span class="bu">Double</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span><span class="fl">3.14</span><span class="op">);</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The value of d is "</span> <span class="op">+</span> d<span class="op">);</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="co">// boolean</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Boolean</span> b <span class="op">=</span> <span class="bu">Boolean</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span><span class="kw">true</span><span class="op">);</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The value of b is "</span> <span class="op">+</span> b<span class="op">);</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="co">// char</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Character</span> c <span class="op">=</span> <span class="bu">Character</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span><span class="ch">'a'</span><span class="op">);</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The value of c is "</span> <span class="op">+</span> c<span class="op">);</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Using substring method on String</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> str <span class="op">=</span> <span class="st">"Hello, world!"</span><span class="op">;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> substr <span class="op">=</span> str<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">7</span><span class="op">,</span> <span class="dv">12</span><span class="op">);</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The substring is "</span> <span class="op">+</span> substr<span class="op">);</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Generating random numbers</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Random</span> rand <span class="op">=</span> <span class="kw">new</span> <span class="bu">Random</span><span class="op">();</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Integer</span> randNum <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span>rand<span class="op">.</span><span class="fu">nextInt</span><span class="op">(</span><span class="dv">100</span><span class="op">));</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The random number is "</span> <span class="op">+</span> randNum<span class="op">);</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Sorting an array</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Arrays</span><span class="op">.</span><span class="fu">sort</span><span class="op">(</span>arr<span class="op">);</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The sorted array is "</span> <span class="op">+</span> <span class="bu">Arrays</span><span class="op">.</span><span class="fu">toString</span><span class="op">(</span>arr<span class="op">));</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>WrapperClassesExample<span class="op">.</span><span class="fu">main</span><span class="op">(</span><span class="kw">null</span><span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np</code></pre>
+<pre><code>The number is 42
+The third element of the array is 3
+The value of d is 3.14
+The value of b is true
+The value of c is a
+The substring is world
+The random number is 80
+The sorted array is [1, 2, 3, 4, 5]</code></pre>
 </div>
 </div>
+</section>
+<section id="teacher-code-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="teacher-code-exploration">Teacher Code Exploration:</h2>
+<section id="what-are-methods-and-control-structures" class="level4">
+<h4 class="anchored" data-anchor-id="what-are-methods-and-control-structures">What are Methods and Control Structures?</h4>
+<p>A method, also known as a function, is a block of code that performs a specific task. Methods allow programmers to break down complex problems into smaller, more manageable pieces of code. Methods can be called from other parts of a program, allowing for code reuse and modularity.</p>
+<p>Control structures are statements that determine the flow of execution in a program. They allow programmers to create conditional statements, loops, and other constructs that can be used to control the order in which instructions are executed. Common control structures include if-else statements, for loops, while loops, and switch statements.</p>
+</section>
+<section id="explore-menu-code" class="level4">
+<h4 class="anchored" data-anchor-id="explore-menu-code">Explore Menu Code:</h4>
+</section>
+</section>
+<section id="ap-classroom-frq---methods-and-control-structures" class="level2">
+<h2 class="anchored" data-anchor-id="ap-classroom-frq---methods-and-control-structures">AP Classroom FRQ - Methods and Control Structures</h2>
+<blockquote class="blockquote">
+<p>Chat GPT Generated (Somewhat PBL Related)</p>
+</blockquote>
+<p>Suppose you are designing a program that will calculate the average temperature of a city over a given period of time. Write a Java program with a method called <code>averageTemp</code> that takes two parameters: an array of temperatures and an integer representing the number of days. The method should use a loop to iterate over the array of temperatures and calculate the average temperature of the city over the given period of time.</p>
+<p>Your program should also include a <code>main</code> method that creates an array of temperatures and calls the <code>averageTemp</code> method to calculate the average temperature. Finally, your program should print the average temperature to the console.</p>
+<p>Note: You can assume that the array of temperatures contains only valid temperatures in Celsius, and that the number of days is greater than 0.</p>
+<section id="completed-and-running-code" class="level3">
+<h3 class="anchored" data-anchor-id="completed-and-running-code">Completed and Running Code:</h3>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;java&quot;}" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> TemperatureCalculator <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="co">// create an array of temperatures</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span><span class="op">[]</span> temperatures <span class="op">=</span> <span class="op">{</span><span class="fl">23.6</span><span class="op">,</span> <span class="fl">24.3</span><span class="op">,</span> <span class="fl">22.9</span><span class="op">,</span> <span class="fl">25.1</span><span class="op">,</span> <span class="fl">26.8</span><span class="op">,</span> <span class="fl">20.5</span><span class="op">};</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">// call the averageTemp method to calculate the average temperature</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> averageTemperature <span class="op">=</span> <span class="fu">averageTemp</span><span class="op">(</span>temperatures<span class="op">,</span> temperatures<span class="op">.</span><span class="fu">length</span><span class="op">);</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="co">// print the average temperature to the console</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The average temperature over "</span> <span class="op">+</span> temperatures<span class="op">.</span><span class="fu">length</span> <span class="op">+</span> <span class="st">" days is "</span> <span class="op">+</span> averageTemperature <span class="op">+</span> <span class="st">" degrees Celsius."</span><span class="op">);</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">double</span> <span class="fu">averageTemp</span><span class="op">(</span><span class="dt">double</span><span class="op">[]</span> temperatures<span class="op">,</span> <span class="dt">int</span> numDays<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> sum <span class="op">=</span> <span class="fl">0.0</span><span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="co">// iterate over the array of temperatures and calculate the sum of temperatures</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> numDays<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>            sum <span class="op">+=</span> temperatures<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="co">// calculate the average temperature</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> averageTemperature <span class="op">=</span> sum <span class="op">/</span> numDays<span class="op">;</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> averageTemperature<span class="op">;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>TemperatureCalculator<span class="op">.</span><span class="fu">main</span><span class="op">(</span><span class="kw">null</span><span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The average temperature over 6 days is 23.866666666666664 degrees Celsius.</code></pre>
+</div>
+</div>
+</section>
+<section id="frq-description" class="level3">
+<h3 class="anchored" data-anchor-id="frq-description">FRQ Description:</h3>
+<ul>
+<li>Methods:
+<ul>
+<li>The averageTemp method takes two parameters: an array of temperatures and an integer representing the number of days.</li>
+<li>The method uses a for loop to iterate over the array of temperatures and calculate the sum of temperatures.</li>
+<li>The method then calculates the average temperature and returns it as a double.</li>
+<li>The main method calls the averageTemp method and prints the average temperature to the console.</li>
+</ul></li>
+<li>Control Structures:
+<ul>
+<li>The for loop is used to iterate over the array of temperatures in the averageTemp method.</li>
+<li>The if statement could be used to check for invalid inputs (such as a negative number of days).</li>
+</ul></li>
+<li>Data Types:
+<ul>
+<li>The double data type is used to represent temperatures and the average temperature.</li>
+<li>The int data type is used to represent the number of days.</li>
+<li>The double[] data type is used to represent the array of temperatures.</li>
+</ul></li>
+</ul>
+<p>The program uses basic methods and control structures to solve a simple problem of calculating the average temperature of a city over a period of time. The data types used are appropriate for representing temperatures and other numerical values, and the program could be further extended to handle more complex temperature data or include additional features.</p>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

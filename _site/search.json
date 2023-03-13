@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "trio-data-structures-2",
-    "section": "",
-    "text": "Week 25 Hacks\n\n\n\n\n\n\n\n\n\n\n\n\nMar 12, 2023\n\n\nAdi, Akhil, Tristan\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMar 9, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "System.out.println(\"Hi\");\n\nHi"
-  },
-  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
@@ -21,24 +7,24 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
+    "objectID": "posts/Week-25-Hacks/index.html",
+    "href": "posts/Week-25-Hacks/index.html",
+    "title": "Week 25 Hacks",
+    "section": "",
+    "text": "int\ndouble\nboolean\nchar\n\n\n\n\n\n\nint –> Integer\ndouble –> Double\nboolean –> Boolean\nchar –> Character\nIntroduce: String\n\n\nimport java.util.Arrays;\nimport java.util.Random;\n\npublic class WrapperClassesExample {\n    public static void main(String[] args) {\n        // int\n        Integer num = Integer.valueOf(42);\n        Integer[] arr = {Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3), Integer.valueOf(4), Integer.valueOf(5)};\n        System.out.println(\"The number is \" + num);\n        System.out.println(\"The third element of the array is \" + arr[2]);\n        \n        // double\n        Double d = Double.valueOf(3.14);\n        System.out.println(\"The value of d is \" + d);\n        \n        // boolean\n        Boolean b = Boolean.valueOf(true);\n        System.out.println(\"The value of b is \" + b);\n        \n        // char\n        Character c = Character.valueOf('a');\n        System.out.println(\"The value of c is \" + c);\n        \n        // Using substring method on String\n        String str = \"Hello, world!\";\n        String substr = str.substring(7, 12);\n        System.out.println(\"The substring is \" + substr);\n        \n        // Generating random numbers\n        Random rand = new Random();\n        Integer randNum = Integer.valueOf(rand.nextInt(100));\n        System.out.println(\"The random number is \" + randNum);\n        \n        // Sorting an array\n        Arrays.sort(arr);\n        System.out.println(\"The sorted array is \" + Arrays.toString(arr));\n    }\n}\n\nWrapperClassesExample.main(null);\n\nThe number is 42\nThe third element of the array is 3\nThe value of d is 3.14\nThe value of b is true\nThe value of c is a\nThe substring is world\nThe random number is 80\nThe sorted array is [1, 2, 3, 4, 5]\n\n\n\n\n\n\n\nA method, also known as a function, is a block of code that performs a specific task. Methods allow programmers to break down complex problems into smaller, more manageable pieces of code. Methods can be called from other parts of a program, allowing for code reuse and modularity.\nControl structures are statements that determine the flow of execution in a program. They allow programmers to create conditional statements, loops, and other constructs that can be used to control the order in which instructions are executed. Common control structures include if-else statements, for loops, while loops, and switch statements.\n\n\n\n\n\n\n\n\nChat GPT Generated (Somewhat PBL Related)\n\nSuppose you are designing a program that will calculate the average temperature of a city over a given period of time. Write a Java program with a method called averageTemp that takes two parameters: an array of temperatures and an integer representing the number of days. The method should use a loop to iterate over the array of temperatures and calculate the average temperature of the city over the given period of time.\nYour program should also include a main method that creates an array of temperatures and calls the averageTemp method to calculate the average temperature. Finally, your program should print the average temperature to the console.\nNote: You can assume that the array of temperatures contains only valid temperatures in Celsius, and that the number of days is greater than 0.\n\n\n\npublic class TemperatureCalculator {\n    public static void main(String[] args) {\n        // create an array of temperatures\n        double[] temperatures = {23.6, 24.3, 22.9, 25.1, 26.8, 20.5};\n        \n        // call the averageTemp method to calculate the average temperature\n        double averageTemperature = averageTemp(temperatures, temperatures.length);\n        \n        // print the average temperature to the console\n        System.out.println(\"The average temperature over \" + temperatures.length + \" days is \" + averageTemperature + \" degrees Celsius.\");\n    }\n    \n    public static double averageTemp(double[] temperatures, int numDays) {\n        double sum = 0.0;\n        \n        // iterate over the array of temperatures and calculate the sum of temperatures\n        for (int i = 0; i < numDays; i++) {\n            sum += temperatures[i];\n        }\n        \n        // calculate the average temperature\n        double averageTemperature = sum / numDays;\n        \n        return averageTemperature;\n    }\n}\n\nTemperatureCalculator.main(null);\n\nThe average temperature over 6 days is 23.866666666666664 degrees Celsius.\n\n\n\n\n\n\nMethods:\n\nThe averageTemp method takes two parameters: an array of temperatures and an integer representing the number of days.\nThe method uses a for loop to iterate over the array of temperatures and calculate the sum of temperatures.\nThe method then calculates the average temperature and returns it as a double.\nThe main method calls the averageTemp method and prints the average temperature to the console.\n\nControl Structures:\n\nThe for loop is used to iterate over the array of temperatures in the averageTemp method.\nThe if statement could be used to check for invalid inputs (such as a negative number of days).\n\nData Types:\n\nThe double data type is used to represent temperatures and the average temperature.\nThe int data type is used to represent the number of days.\nThe double[] data type is used to represent the array of temperatures.\n\n\nThe program uses basic methods and control structures to solve a simple problem of calculating the average temperature of a city over a period of time. The data types used are appropriate for representing temperatures and other numerical values, and the program could be further extended to handle more complex temperature data or include additional features."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "trio-data-structures-2",
+    "section": "",
+    "text": "Week 25 Hacks\n\n\n\n\n\n\n\n\n\n\n\n\nMar 12, 2023\n\n\nAdi, Akhil, Tristan\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMar 9, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "About this blog"
-  },
-  {
-    "objectID": "posts/Week 25 Hacks/index.html",
-    "href": "posts/Week 25 Hacks/index.html",
-    "title": "Week 25 Hacks",
-    "section": "",
-    "text": "System.out.println(\"np\");\n\nnp"
-  },
-  {
-    "objectID": "posts/Week-25-Hacks/index.html",
-    "href": "posts/Week-25-Hacks/index.html",
-    "title": "Week 25 Hacks",
-    "section": "",
-    "text": "System.out.println(\"np\");\n\nnp"
   }
 ]
